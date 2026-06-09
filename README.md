@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Spoksonat/catnip_interactive/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Spoksonat/catnip_interactive/33394ea)
 
 Binder config lives in `binder/` (`environment.yml` pins **Python 3.11**; several dependencies require Python ≥ 3.11).
 
