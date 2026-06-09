@@ -1,5 +1,9 @@
 #!/bin/bash
 set -eux
+
+# Repo root is /home/jovyan after the image is built.
+pip install --no-cache-dir -r "${HOME}/requirements.txt"
+
 # Make project packages importable from notebooks (simulation_scripts, utils, ...)
 python - <<'PY'
 from pathlib import Path
