@@ -14,4 +14,8 @@ pip install -r requirements.txt
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Spoksonat/catnip_interactive/HEAD)
 
-The repository pins **Python 3.11** (see `.python-version`) because several dependencies require Python ≥ 3.11.
+Binder config lives in `binder/` (`environment.yml` pins **Python 3.11**; several dependencies require Python ≥ 3.11).
+
+Launch (always use `HEAD` or a recent commit hash so Binder does not reuse an old cached build):
+
+https://mybinder.org/v2/gh/Spoksonat/catnip_interactive/HEAD
