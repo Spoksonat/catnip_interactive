@@ -1,0 +1,22 @@
+#!/bin/bash
+set -eux
+# Make project packages importable from notebooks (simulation_scripts, utils, ...)
+python - <<'PY'
+from pathlib import Path
+
+startup = Path.home() / ".ipython/profile_default/startup"
+startup.mkdir(parents=True, exist_ok=True)
+path_setup = startup / "00-catnip-paths.py"
+root = Path("/home/jovyan")
+path_setup.write_text(
+    f"""import sys
+from pathlib import Path
+
+root = Path({root!r})
+for path in (root / "src", root):
+    s = str(path)
+    if s not in sys.path:
+        sys.path.insert(0, s)
+"""
+)
+PY
